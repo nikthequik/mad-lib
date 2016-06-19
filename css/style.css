@@ -5,16 +5,18 @@ html {
 body {
 	margin: 0 auto;
 	width: 80%;
+	font-family: cursive, sans-serif;
 }
 
 #top {
-
+	overflow: auto;
 }
 
 .smiley {
 	border: 3px solid black;
 	float: left;
-	height: 185px;
+	padding: 1em;
+	height: 153px;
 }
 
 .title {
@@ -22,10 +24,22 @@ body {
 	border-right: 3px solid black;
 	border-bottom: 3px solid black;
 	min-height: 185px;
+	text-align: center;
+}
+
+.title h1 {
+	margin: 0;
+	font-size: 4em;
 }
 
 .logo {
 	margin: 0 auto;
+	height: 5em;
 	display: block;
+}
+
+.inputs {
+	border: 3px solid black;
+	height: 200px;
 }
 
