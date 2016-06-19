@@ -5,7 +5,7 @@
 	<title>Angular Mad-Lib</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app>
+<body ng-app="" ng-init="male_name='male name'; dirty_task='dirty task'; obnoxious_celebrity='obnoxious celebrity'; job_title='job title'; celebrity='celebrity'; huge_number='huge number'; tedious_task='tedious task'; useless_skill='useless skill'; adjective='adjective';">
 	<header id="top">
 		<img class="smiley" src="img/smiley.png" alt="">
 		<div class="title">
@@ -13,16 +13,24 @@
 			<h1>Automate This!</h1>
 		</div>
 	</header>
-	<section class="inputs">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
-		<input type="text" name="" id="">
+	<section class="setup">
+		<h1>Provide the following words:</h1>
+		<div class="inputs">
+			<input type="text" ng-model="male_name">
+			<input type="text" ng-model="dirty_task">
+			<input type="text" ng-model="obnoxious_celebrity"><br>
+			<input type="text" ng-model="job_title">
+			<input type="text" ng-model="celebrity">
+			<input type="text" ng-model="huge_number"><br>
+			<input type="text" ng-model="tedious_task">
+			<input type="text" ng-model="useless_skill">
+			<input type="text" ng-model="adjective">
+		</div>
+	</section>
+	<section class="story">
+		<p><span class="output">{{male_name}}</span> was a <span class="output">{{job_title}}</span> who loved technology.  Although he loved parts of his job, he absolutely hated <span class="output">{{tedious_task}}</span> and <span class="output">{{dirty_task}}</span>. So, <span class="output">{{male_name}}</span> met his life mentor <span class="output">{{celebrity}}</span> who told him to learn how to <span class="output">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="output">{{useless_skill}}</span> so he studied programming instead. <br><br>
+		What a great decision! With his new skills, <span class="output">{{male_name}}</span> built a(n) <span class="output">{{adjective}}</span> robot named <span class="output">{{obnoxious_celebrity}}</span> that not only loved <span class="output">{{dirty_task}}</span> but did it <span class="output">{{huge_number}}</span> faster.
+		</p>
 	</section>
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="js/app.js"></script>

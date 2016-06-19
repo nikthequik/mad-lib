@@ -4,7 +4,7 @@ html {
 
 body {
 	margin: 0 auto;
-	width: 80%;
+	width: 1000px;
 	font-family: cursive, sans-serif;
 }
 
@@ -16,30 +16,56 @@ body {
 	border: 3px solid black;
 	float: left;
 	padding: 1em;
-	height: 153px;
+	height: 118px;
 }
 
 .title {
 	border-top: 3px solid black;
 	border-right: 3px solid black;
 	border-bottom: 3px solid black;
-	min-height: 185px;
+	min-height: 150px;
 	text-align: center;
 }
 
 .title h1 {
-	margin: 0;
+	margin: -17px 0 0 0;
 	font-size: 4em;
 }
 
 .logo {
 	margin: 0 auto;
-	height: 5em;
+	height: 4em;
 	display: block;
 }
 
-.inputs {
+.setup {
 	border: 3px solid black;
-	height: 200px;
+	height: 261px;
 }
 
+.setup h1 {
+	margin-left: 13%;
+	font-size: 2.3em;
+}
+
+.inputs {
+	margin: 0 auto;
+	width: 75%;
+}
+
+.inputs input {
+	margin-left: 3.2em;
+	margin-bottom: 0.8em;
+	font-family: cursive;
+}
+
+.story {
+	border: 3px solid black;
+	height: 500px;
+	padding: 0.1em 4em;
+	font-size: 1.5em;
+}
+
+.output {
+	text-decoration: underline;
+}
