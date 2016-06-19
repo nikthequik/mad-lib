@@ -1,0 +1,31 @@
+html {
+	padding: 2em;
+}
+
+body {
+	margin: 0 auto;
+	width: 80%;
+}
+
+#top {
+
+}
+
+.smiley {
+	border: 3px solid black;
+	float: left;
+	height: 185px;
+}
+
+.title {
+	border-top: 3px solid black;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+	min-height: 185px;
+}
+
+.logo {
+	margin: 0 auto;
+	display: block;
+}
+
