@@ -13,24 +13,32 @@
 			<h1>Automate This!</h1>
 		</div>
 	</header>
-	<section class="setup">
+	<section class="setup" ng-show="vm.state" ng-hide="!vm.state">
 		<h1>Provide the following words:</h1>
 		<div class="inputs">
-			<input type="text" ng-model="vm.male_name">
-			<input type="text" ng-model="vm.dirty_task">
-			<input type="text" ng-model="vm.obnoxious_celebrity"><br>
-			<input type="text" ng-model="vm.job_title">
-			<input type="text" ng-model="vm.celebrity">
-			<input type="text" ng-model="vm.huge_number"><br>
-			<input type="text" ng-model="vm.tedious_task">
-			<input type="text" ng-model="vm.useless_skill">
-			<input type="text" ng-model="vm.adjective">
+			<form name="madForm" ng-submit="vm.generate()">
+			<div ng-if="vm.madForm.$invalid == undefined">
+				<input type="text" ng-model="vm.male_name" placeholder="male name" required>
+				<input type="text" ng-model="vm.dirty_task" placeholder="dirty task" required>
+				<input type="text" ng-model="vm.obnoxious_celebrity" placeholder="obnoxious celebrity"><br>
+				<input type="text" ng-model="vm.job_title" placeholder="job title" required>
+				<input type="text" ng-model="vm.celebrity" placeholder="celebrity" required>
+				<input type="number" ng-model="vm.huge_number" placeholder="huge number" required><br>
+				<input type="text" ng-model="vm.tedious_task" placeholder="tedious task" required>
+				<input type="text" ng-model="vm.useless_skill" placeholder="useless skill" required>
+				<input type="text" ng-model="vm.adjective" placeholder="adjective" required>
+				<hr>
+				<button id="create" type="submit">Generate Mad Lib!</button>
+			</div>
+			</form>
 		</div>
 	</section>
-	<section class="story">
-		<p><span class="output">{{vm.male_name}}</span> was a <span class="output">{{vm.job_title}}</span> who loved technology.  Although he loved parts of his job, he absolutely hated <span class="output">{{vm.tedious_task}}</span> and <span class="output">{{vm.dirty_task}}</span>. So, <span class="output">{{vm.male_name}}</span> met his life mentor <span class="output">{{vm.celebrity}}</span> who told him to learn how to <span class="output">{{vm.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="output">{{vm.useless_skill}}</span> so he studied programming instead. <br><br>
-		What a great decision! With his new skills, <span class="output">{{vm.male_name}}</span> built a(n) <span class="output">{{vm.adjective}}</span> robot named <span class="output">{{vm.obnoxious_celebrity}}</span> that not only loved <span class="output">{{vm.dirty_task}}</span> but did it <span class="output">{{vm.huge_number}}</span> faster.
+	<section class="story" ng-show="!vm.state" ng-hide="vm.state" ng-cloak>
+		<p>
+			<span class="output">{{vm.male_name}}</span> was a <span class="output">{{vm.job_title}}</span> who loved technology.  Although he loved parts of his job, he absolutely hated <span class="output">{{vm.tedious_task}}</span> and <span class="output">{{vm.dirty_task}}</span>. So, <span class="output">{{vm.male_name}}</span> met his life mentor <span class="output">{{vm.celebrity}}</span> who told him to learn how to <span class="output">{{vm.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="output">{{vm.useless_skill}}</span> so he studied programming instead. <br><br>
+			What a great decision! With his new skills, <span class="output">{{vm.male_name}}</span> built a(n) <span class="output">{{vm.adjective}}</span> robot named <span class="output">{{vm.obnoxious_celebrity}}</span> that not only loved <span class="output">{{vm.dirty_task}}</span> but did it <span class="output">{{vm.huge_number}}</span> faster.
 		</p>
+		<button type="button" ng-click="vm.restart()">Start Over</button>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="js/app.js"></script>

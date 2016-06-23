@@ -40,7 +40,8 @@ body {
 
 .setup {
 	border: 3px solid black;
-	height: 261px;
+	height: auto;
+	overflow: hidden;
 }
 
 .setup h1 {
@@ -61,11 +62,14 @@ body {
 
 .story {
 	border: 3px solid black;
-	height: 500px;
+	height: auto;
 	padding: 0.1em 4em;
 	font-size: 1.5em;
+	clear: both;
+	overflow: hidden;
 }
 
-.output {
-	text-decoration: underline;
+button {
+	float: right;
+	margin-bottom: 0.8em;
 }
