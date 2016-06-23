@@ -66,6 +66,7 @@ body {
 	font-size: 1.5em;
 }
 
-.output {
-	text-decoration: underline;
+#create {
+	display: block;
+	margin: 0 auto;
 }
