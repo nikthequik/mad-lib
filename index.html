@@ -16,23 +16,26 @@
 	<section class="setup">
 		<h1>Provide the following words:</h1>
 		<div class="inputs">
-			<input type="text" ng-model="vm.male_name">
-			<input type="text" ng-model="vm.dirty_task">
-			<input type="text" ng-model="vm.obnoxious_celebrity"><br>
-			<input type="text" ng-model="vm.job_title">
-			<input type="text" ng-model="vm.celebrity">
-			<input type="text" ng-model="vm.huge_number"><br>
-			<input type="text" ng-model="vm.tedious_task">
-			<input type="text" ng-model="vm.useless_skill">
-			<input type="text" ng-model="vm.adjective">
+			<form name="madForm">
+				<input type="text" ng-model="vm.male_name" placeholder="male name">
+				<input type="text" ng-model="vm.dirty_task" placeholder="dirty task">
+				<input type="text" ng-model="vm.obnoxious_celebrity" placeholder="obnoxious celebrity"><br>
+				<input type="text" ng-model="vm.job_title" placeholder="job title">
+				<input type="text" ng-model="vm.celebrity" placeholder="celebrity">
+				<input type="number" ng-model="vm.huge_number" placeholder="huge number"><br>
+				<input type="text" ng-model="vm.tedious_task" placeholder="tedious task">
+				<input type="text" ng-model="vm.useless_skill" placeholder="useless skill">
+				<input type="text" ng-model="vm.adjective" placeholder="adjective">
+				<button type="submit">Generate Mad Lib!</button>
+			</form>
 		</div>
 	</section>
 	<section class="story">
-		<p><span class="output">{{vm.male_name}}</span> was a <span class="output">{{vm.job_title}}</span> who loved technology.  Although he loved parts of his job, he absolutely hated <span class="output">{{vm.tedious_task}}</span> and <span class="output">{{vm.dirty_task}}</span>. So, <span class="output">{{vm.male_name}}</span> met his life mentor <span class="output">{{vm.celebrity}}</span> who told him to learn how to <span class="output">{{vm.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="output">{{vm.useless_skill}}</span> so he studied programming instead. <br><br>
+		<p ng-if="submitted"><span class="output">{{vm.male_name}}</span> was a <span class="output">{{vm.job_title}}</span> who loved technology.  Although he loved parts of his job, he absolutely hated <span class="output">{{vm.tedious_task}}</span> and <span class="output">{{vm.dirty_task}}</span>. So, <span class="output">{{vm.male_name}}</span> met his life mentor <span class="output">{{vm.celebrity}}</span> who told him to learn how to <span class="output">{{vm.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="output">{{vm.useless_skill}}</span> so he studied programming instead. <br><br>
 		What a great decision! With his new skills, <span class="output">{{vm.male_name}}</span> built a(n) <span class="output">{{vm.adjective}}</span> robot named <span class="output">{{vm.obnoxious_celebrity}}</span> that not only loved <span class="output">{{vm.dirty_task}}</span> but did it <span class="output">{{vm.huge_number}}</span> faster.
 		</p>
 	</section>
-	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
