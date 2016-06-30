@@ -69,7 +69,16 @@ body {
 	overflow: hidden;
 }
 
+.output {
+	animation: materialize 5s;
+}
+
 button {
 	float: right;
 	margin-bottom: 0.8em;
+}
+
+@-webkit-keyframes materialize {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }

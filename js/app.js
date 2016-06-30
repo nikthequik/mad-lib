@@ -1,4 +1,4 @@
-angular.module('madLib',[])
+angular.module('madLib',['ngAnimate'])
 .controller('MyCtrl', function($scope){
 	var vm = this;
 	vm.generate = function(){
@@ -6,7 +6,9 @@ angular.module('madLib',[])
 	};
 	vm.restart = function(){
 		vm.state = true;
+		vm.startAnimation = false;
 		madForm.reset();
 	};
 	vm.state = true;
+	vm.startAnimation = false;
 });
