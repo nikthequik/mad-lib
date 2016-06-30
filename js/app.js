@@ -3,6 +3,7 @@ angular.module('madLib',['ngAnimate'])
 	var vm = this;
 	vm.generate = function(){
 		vm.state = false;
+		vm.startAninmation = !vm.startAninmation;
 	};
 	vm.restart = function(){
 		vm.state = true;
